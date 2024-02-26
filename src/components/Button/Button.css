@@ -1,0 +1,18 @@
+
+.button {
+
+    background-color: #FCCB6F;
+    color: #03223F;
+    width: 10em;
+    font-size: 2em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    gap: 10px;
+}
+
+.paws{
+    width: 20%;
+}
