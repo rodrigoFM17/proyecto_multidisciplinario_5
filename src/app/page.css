@@ -1,6 +1,6 @@
 .Home{
     width: 100%;
-    background-color: #03223f;
+    background-color: var(--contrast);
     background: url('../../public/main-background.png') center;
     height: 100vh; 
     overflow-y: auto;
@@ -15,7 +15,7 @@
 .welcome article{
     background: url('../../public/card1-background.png') center;
     width: 100%;
-    color: #03223f;
+    color: var(--contrast);
     border-radius: 1em;
     height: 80vh;
     justify-content: space-between;

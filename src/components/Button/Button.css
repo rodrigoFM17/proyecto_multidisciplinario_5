@@ -1,8 +1,8 @@
 
 .button {
 
-    background-color: #FCCB6F;
-    color: #03223F;
+    background-color: var(--light);
+    color: var(--contrast);
     width: 10em;
     font-size: 2em;
     border-radius: 5px;

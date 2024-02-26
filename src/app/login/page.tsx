@@ -13,7 +13,7 @@ export default function Login () {
                 <Logo />
 
                 <InputText type='text' placeholder='nombre de usuario' /> 
-                <InputText type='password' placeholder='contrasena' />
+                <InputText type='password' placeholder='contraseña' />
 
                 <Button text='entrar'/>
 

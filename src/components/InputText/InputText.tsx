@@ -5,7 +5,7 @@ type inputArgs = {
     type: string
 }
 
-export default function InputText({placeholder, type}: inputArgs) {
+export default function InputText({placeholder, type}: Readonly<inputArgs>) {
 
     return (
         <input type={type} placeholder={placeholder} className='inputText'/>

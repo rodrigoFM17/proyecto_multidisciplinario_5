@@ -3,7 +3,7 @@ import './CardImage.css'
 import example from '../../../public/login-background.png'
 import Reactions from "../Reactions/Reactions";
 
-export default function CardImage({srcImage}: {srcImage: string}) {
+export default function CardImage({srcImage}: Readonly<{srcImage: string}>) {
 
     return (
 
