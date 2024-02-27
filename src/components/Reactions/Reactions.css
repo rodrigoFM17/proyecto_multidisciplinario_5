@@ -1,11 +1,11 @@
 .reactionsContainer{
     position: absolute;
     bottom: 0;
-    padding: 1em;
+    padding: 20px;
     left: 20px;
-    width: 12vw;
-    border-radius: 1em 1em 0 0;
-    height: max-content;
+    width: 30%;
+    border-radius: 10px 10px 0 0;
+    height: 15%;
     display: flex;
     justify-content: center;
     gap: 1vw;

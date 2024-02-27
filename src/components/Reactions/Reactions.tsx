@@ -8,10 +8,10 @@ export default function Reactions (){
     return (
         <div className='reactionsContainer'>
             <button>
-                <Image src={meDivierte} alt='me divierte' className='reaction'/>
+                <Image src={meDivierte} alt='me divierte' className='reaction' title='me divierte'/>
             </button>
             <button>
-                <Image src={meEncanta} alt='me encanta' className='reaction'/>
+                <Image src={meEncanta} alt='me encanta' className='reaction' title='me encanta'/>
             </button>
 
         </div>

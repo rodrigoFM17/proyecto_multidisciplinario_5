@@ -1,6 +1,6 @@
 import Logo from "@/components/Logo/Logo";
 import './page.css'
-import CardImage from "@/components/CardImage/CardImage";
+import ContainerImages from "@/components/ContainerImages/ContainerImages";
 
 export default function Home() {
   return (
@@ -23,11 +23,10 @@ export default function Home() {
 
         </article>
 
-        <CardImage srcImage="" />
       </section>
 
+      <ContainerImages />
 
-      
       
     </main>
   );

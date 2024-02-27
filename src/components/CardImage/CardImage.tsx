@@ -11,8 +11,7 @@ export default function CardImage({srcImage}: {srcImage: string}) {
 
             <Image src={example} alt="image" className="Image"  />
 
-            
-                <Reactions/>
+            <Reactions/>
             
         </figure>
     )
