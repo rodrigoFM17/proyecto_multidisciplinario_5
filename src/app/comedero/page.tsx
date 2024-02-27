@@ -12,8 +12,8 @@ export default function Login () {
 
                 <Comedero />
 
-                <InputText type='text' placeholder='nombre de usuario' /> 
-                <InputText type='password' placeholder='contraseña' />
+                <InputText type='text' placeholder='Nombre de usuario' /> 
+                <InputText type='password' placeholder='Contraseña' />
                 <InputText type='text' placeholder='Id del kit' />
 
                 <Button text='Agregar'/>

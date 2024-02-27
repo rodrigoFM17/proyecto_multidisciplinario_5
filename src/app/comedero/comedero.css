@@ -34,8 +34,12 @@
         padding: 2em 2em;
         height: 80vh;
         gap: 1em;
-        background: white;
-    }    
+        background: var(--contrast)
+    }
+
+    .login form > input {
+        font-size: 6vw;
+    }
 }
 
 

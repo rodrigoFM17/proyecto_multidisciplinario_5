@@ -36,3 +36,26 @@
         width: 60%;
     }
 }
+
+@media (max-width: 568px){
+    .Home{
+        padding-block: 2vh;
+    }
+
+    .welcome article{
+
+        height: fit-content;
+
+        & h2{
+            font-size: 10vw;
+        }
+
+        & h3{
+            font-size: 7vw;
+        }
+
+        & p{
+            font-size: 5vw;
+        }
+    }
+}
