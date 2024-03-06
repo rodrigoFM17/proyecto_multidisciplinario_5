@@ -14,7 +14,7 @@
 }
 
  body {
-
+  background: url('../../public/main-background.png') center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
