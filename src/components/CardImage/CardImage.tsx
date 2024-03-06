@@ -9,10 +9,8 @@ export default function CardImage({srcImage}: Readonly<{srcImage: string}>) {
 
         <figure className="CardImage">
 
-            <Image src={example} alt="image" className="Image"  />
-
-            
-                <Reactions/>
+            <Image src={srcImage} alt="image" className="Image" width={500} height={500} />
+            <Reactions/>
             
         </figure>
     )

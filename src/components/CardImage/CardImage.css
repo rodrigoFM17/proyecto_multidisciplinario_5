@@ -2,11 +2,26 @@
 
 .CardImage{
     position: relative;
-    width: 50%;
-    
+    width: 100%;
+    border-radius: 1em;
+}
+
+.CardImage:hover{
+    scale: 1.05;
+    transition: 300ms ease-in;
+    z-index: 2;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+
+    & .reactionsContainer{
+        opacity: 1;
+        transition: 700ms ease-in-out;
+    }
 }
 
 .CardImage .Image{
+    border-radius: 1em;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+

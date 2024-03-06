@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from '../../../public/comedero.png'
-import './comedero.css'
+import './Comedero.css'
 
 
 export default function Comedero({width}: Readonly<{width?: string}>) {        

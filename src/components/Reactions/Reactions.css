@@ -1,18 +1,27 @@
 .reactionsContainer{
     position: absolute;
     bottom: 0;
-    padding: 1em;
+    padding: 10px;
     left: 20px;
-    width: 12vw;
+    width: fit-content;
     border-radius: 1em 1em 0 0;
     height: max-content;
     display: flex;
     justify-content: center;
-    gap: 1vw;
     align-items: center;
+    gap: 10px;
     background-color: #003a71;
+    
+    opacity: 0;
+}
+
+.reactionsContainer button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .reaction {
-    height: 4vh;
+    max-width: 30px;
+    height: 2em
 }
