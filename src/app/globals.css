@@ -29,6 +29,9 @@
 @media (width <= 568px) {
   body{
     font-size: 12px;
+    background: url('../../public/mobil_background.png');
+    background-size: cover;
+    
   }
 }
 @media (568px < width <= 900px){

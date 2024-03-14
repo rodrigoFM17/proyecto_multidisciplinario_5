@@ -14,7 +14,7 @@
 
     & .reactionsContainer{
         opacity: 1;
-        transition: 700ms ease-in-out;
+        transition: 500ms ease-in-out;
     }
 }
 
@@ -24,4 +24,5 @@
     height: 100%;
     object-fit: cover;
 }
+
 

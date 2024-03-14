@@ -20,6 +20,7 @@
 }
 
 .dispenser{
+    background-color: var(--contrast);
     border: 1px solid var(--secondary-color);
     border-radius: .5em;
     margin: 3em auto;
@@ -70,7 +71,7 @@
     align-items: center;
     background-color: var(--light);
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto;
 
     & span {
         font-size: 1.5em;
