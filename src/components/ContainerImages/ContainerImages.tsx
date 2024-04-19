@@ -4,6 +4,7 @@ import CardImage from '../CardImage/CardImage'
 import { useEffect, useRef, useState } from 'react'
 import { getPublications } from '@/helpers/fetchApi'
 import {v4 as uuidv4} from 'uuid'
+import { League_Gothic } from 'next/font/google'
 
 export default function ContainerImages () {
 
@@ -34,9 +35,21 @@ export default function ContainerImages () {
         ws.current.addEventListener('message', data => {
         console.log(data)
         const newPublication = JSON.parse(data.data)
+        const formatted = {
+            id: newPublication._id,
+            attributes: {
+                title: newPublication.title,
+                content: newPublication.content,
+                likes: newPublication.likes,
+                laughs: newPublication.laughs,
+                imageUrl: newPublication.imageUrl
+            }
+
+        }
         console.log(newPublication)
+        console.log(formatted)
         const aux = publications
-        aux.push(newPublication)
+        aux.push(formatted)
         console.log(aux)
         setPublications([...aux])
 
