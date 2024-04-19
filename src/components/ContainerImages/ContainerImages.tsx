@@ -5,11 +5,18 @@ import { useEffect, useRef, useState } from 'react'
 import { getPublications } from '@/helpers/fetchApi'
 import {v4 as uuidv4} from 'uuid'
 import { League_Gothic } from 'next/font/google'
+import ReconnectingWebSocket from 'reconnecting-websocket'
+
+const optionsWs = {
+    WebSocket: WebSocket,
+    connectionTimeout: 10000,
+    maxRetries: 5
+}
 
 export default function ContainerImages () {
 
     const [publications, setPublications] = useState<any[]>([])
-    const ws = useRef<WebSocket>(null)
+    const ws = useRef<ReconnectingWebSocket>(new ReconnectingWebSocket(process.env.NEXT_PUBLIC_API_WS!, [], optionsWs))
 
     useEffect(() => {
         const fetchPublications = async () => {
@@ -22,8 +29,9 @@ export default function ContainerImages () {
     useEffect(()=>{
         if(ws.current)
             ws.current.close()
-
-        ws.current = new WebSocket('wss://websocket-super-bowl.onrender.com')
+        ws.current = new ReconnectingWebSocket(process.env.NEXT_PUBLIC_API_WS!, [], optionsWs)
+        if(process.env.NEXT_PUBLIC_API_WS)
+         
         
         ws.current.addEventListener('open', ()=> {
             console.log('conectades')
