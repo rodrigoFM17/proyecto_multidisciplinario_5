@@ -17,7 +17,6 @@ export default function CardImage({srcImage, publicationId, initialLaughs, initi
     useEffect(()=>{
         const fetchComments = async () => {
             const newComments = await getComments(publicationId)
-            console.log(newComments.data)
             SetComments(newComments.data)
         }
         fetchComments()
