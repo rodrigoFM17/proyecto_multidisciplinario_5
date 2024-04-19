@@ -1,0 +1,58 @@
+
+.perfil{
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    background: url('../../../../public/login-background.png') center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil form {
+    width: 80%;
+    height: 80vh;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    background-color: #03223fb6 ;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 300px;
+
+    & h1 {
+        font-size: 2.5em;
+        text-align: center;
+        width: 60%;
+        border-radius: 5px;
+        background-color: var(--light);
+    }
+
+    & fieldset {
+        display: flex;
+        align-items: center;
+        color: var(--secondary-color);
+        font-size: 2em;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    #nickname, #contrasena {
+        background: none;
+        outline: none;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+
+    & button {
+        background-color: var(--light);
+    }
+
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+    }
+}

@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh; 
     overflow-y: auto;
+    padding: 5vh;
 }
 
 .welcome{
@@ -64,5 +65,14 @@
 }
 
 .seccion1 h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
     font-size: 3em;
+    gap: 1em;
+
+    & .image {
+        width: 2em;
+    }
 }

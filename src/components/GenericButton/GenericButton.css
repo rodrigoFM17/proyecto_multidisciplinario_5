@@ -1,0 +1,14 @@
+
+.generic-button{
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding: .5em 1em;
+    border-radius: 10px;
+    gap: 1em;
+
+    & .image {
+
+        width: 2em;
+    }
+}

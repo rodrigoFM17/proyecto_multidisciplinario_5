@@ -1,9 +1,9 @@
 import './ParticularDispenser.css'
-import food from '../../../../public/food.svg'
-import droplet from '../../../../public/droplet.svg'
+import food from '../../../../../../public/food.svg'
+import droplet from '../../../../../../public/droplet.svg'
 import Image from 'next/image'
-import bowl from '../../../../public/bowl.svg'
-import images from '../../../../public/images-regular.svg'
+import bowl from '../../../../../../public/bowl.svg'
+import images from '../../../../../../public/images-regular.svg'
 
 export default function ParticularDispenser({params}: any){
 
@@ -17,7 +17,7 @@ export default function ParticularDispenser({params}: any){
             </header>
 
             <article className="dispenser">
-                <h2>Comedero {params.id}</h2>
+                <h2>Comedero {params.comederoId}</h2>
                 
                 <div>
                     <figure className='containerInfoFood'>

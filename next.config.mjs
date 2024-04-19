@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+import 'dotenv/config.js'
 const nextConfig = {
     
     images: {
         domains: [
+            "res.cloudinary.com",
             'www.google.com',
             "static.fundacion-affinity.org",
             "ichef.bbci.co.uk",
@@ -14,7 +17,8 @@ const nextConfig = {
             "img.freepik.com",
             "www.diariodesevilla.es",
             "fotografias.larazon.es",
-            "estaticos-cdn.prensaiberica.es"
+            "estaticos-cdn.prensaiberica.es",
+            "url"
         ]
     },
 

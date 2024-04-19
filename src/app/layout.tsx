@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import logo from '../../public/logo.svg'
 import { Happy_Monkey } from 'next/font/google'
+import { UserContextProvider } from "@/context/UserContext";
 
 const font = Happy_Monkey({
   weight: "400",
@@ -21,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <UserContextProvider>
+        <body className={font.className}>{children}</body>
+      </UserContextProvider>
     </html>
   );
 }

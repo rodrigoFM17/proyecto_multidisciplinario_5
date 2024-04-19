@@ -1,34 +1,41 @@
 'use client'
 import meEncanta from '../../../public/me encanta.svg'
-import meDivierte from '../../../public/me divierte.svg'
+import imgComments from '../../../public/comments.svg'
 import Image from 'next/image'
 import './Reactions.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { updateLikes } from '@/helpers/fetchApi'
 
-export default function Reactions (){
 
-    const [likes, setLikes] = useState(0)
-    const [laughs, setLaughs] = useState(0)
+export default function Reactions ({setShow, initialLikes, initialLaughs, publicationId, comments}:any){
+
+    const [likes, setLikes] = useState(initialLikes)
+
+    useEffect(()=> {
+        if(likes > initialLaughs){
+            const fetchPublications = async () => {
+                const updated = await updateLikes(publicationId, likes) 
+                await console.log(updated)
+            }
+            fetchPublications()
+        }
+    },[likes])
+    
 
     const increseLikes = () => {
         setLikes(likes + 1)
-    }
-
-    const increseLaughs = () => {
-        setLaughs(laughs + 1)
     }
 
     return (
         <div className='reactionsContainer'>
             <button onClick={increseLikes}>
                 {likes}
-                <Image src={meDivierte} alt='me divierte' className='reaction' title='me divierte'/>
-            </button>
-            <button onClick={increseLaughs}>
-                {laughs}
                 <Image src={meEncanta} alt='me encanta' className='reaction' title='me encanta'/>
             </button>
-
+            <button onClick={() => setShow(prev => !prev)}>
+                {comments}
+                <Image src={imgComments} alt='comentarios' className='reaction' title='comentarios' />
+            </button>
         </div>
     )
 }
