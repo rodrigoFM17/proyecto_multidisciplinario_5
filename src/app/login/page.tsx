@@ -17,16 +17,17 @@ export default function Login () {
         e.preventDefault()
         const user = document.querySelector('#user') as HTMLInputElement
         const password = document.querySelector('#password') as HTMLInputElement
-        const kit = document.querySelector('#kit') as HTMLInputElement
         
         if(user.value !== '' && password.value !=='' ){
-            const logged = await login(user.value, password.value, kit.value)
+            const logged = await login(user.value, password.value, "yfhg")
             await console.log(logged)
             if (logged.type == "user"){
                 alert('inicio de sesion correcto')
                 const userLogged = {
+                    id: logged.attributes.user._id,
                     nickname: logged.attributes.user.nickname,
-                    token: logged.attributes.token
+                    token: logged.attributes.token,
+                    password: password.value
                 }
                 setUser(userLogged)
                 router.push('/')
@@ -63,7 +64,6 @@ export default function Login () {
                 <Logo />
                 <InputText type='text' placeholder='Nombre de usuario' id='user'/> 
                 <InputText type='password' placeholder='Contraseña' id='password' />
-                <InputText type='text' placeholder='id del Kit (si tiene uno)' id='kit'/>
 
                 <Button text='entrar' onClick={handleLogin}/>
                 <Button text='registrarse' onClick={handleRegister}/>

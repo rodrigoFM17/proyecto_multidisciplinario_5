@@ -11,7 +11,7 @@
     gap: 3em;
 }
 
-.welcome article{
+.welcome > article{
     background: url('../../public/card1-background.png') center;
     width: 100%;
     color: var(--contrast);
@@ -40,7 +40,7 @@
         padding-block: 2vh;
     }
 
-    .welcome article{
+    .welcome > article{
 
         height: fit-content;
 
@@ -74,5 +74,30 @@
 
     & .image {
         width: 2em;
+    }
+}
+
+.container-dashboard{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+
+    & > article {
+        border : 1px solid var(--light);
+        color: var(--primary-color);
+        padding: 1em;
+        border-radius: .5em;
+        display: flex;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.05;
+            transition: 300ms all;
+        }
+
+        & h3 {
+            color: var(--light);
+        }
     }
 }

@@ -35,11 +35,7 @@ export default function CardImage({srcImage, publicationId, initialLaughs, initi
                 />
                 
             </figure>
-            {
-                showComments && <figcaption className="container-comments">
-                    <Comments publicationId={publicationId} />
-                </figcaption>
-            }
+            
         </div>
     )
 }

@@ -58,7 +58,7 @@ export const getPublication = async (publicationId: string): Promise<any[any] | 
 export const login = async (nickname:string , password:string, kitId?: string): Promise<any | null> => {
     let logged = null 
     if(kitId){
-        await fetch(`${API_URL}/users/user`, {
+        await fetch(`${API_URL}/users/user/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -108,4 +108,32 @@ export const register = async (nickname: string, password: string, kitId?: strin
     }
     console.log(registered)
     return registered
+}
+
+export const updateConfigKit = async (nickname: string, hour: string, foodAmount: number) =>  {
+    let updatedConfig = null
+    await fetch(`${API_URL}/users/${nickname}/kits/timeconfig`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            nickname, 
+            timeConfigs: {
+                    hour,
+                    foodAmount
+                }
+        })
+    })
+    .then(res => res.json())
+    .then(data => updatedConfig = data)
+    return updatedConfig
+}
+
+export const getDispensationsHistory = async (userId: string): Promise<any[any] | null> => {
+    let dispensationsHistory = null
+    await fetch(`${API_URL}/users/${userId}/kits/dispesation`)
+    .then(res => res.json())
+    .then(data => dispensationsHistory = data)
+    return dispensationsHistory
 }

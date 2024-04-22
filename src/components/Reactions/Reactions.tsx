@@ -32,7 +32,7 @@ export default function Reactions ({setShow, initialLikes, initialLaughs, public
                 {likes}
                 <Image src={meEncanta} alt='me encanta' className='reaction' title='me encanta'/>
             </button>
-            <button onClick={() => setShow(prev => !prev)}>
+            <button onClick={() => {}}>
                 {comments}
                 <Image src={imgComments} alt='comentarios' className='reaction' title='comentarios' />
             </button>

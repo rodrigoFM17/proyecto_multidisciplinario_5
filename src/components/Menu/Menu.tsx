@@ -13,7 +13,10 @@ export default function Menu () {
         <>
             <header className='header-menu' >
                 {
-                    user.nickname ? user.nickname :
+                    user.nickname ? <span onClick={()=> router.push(`${user.nickname}/kits/config`)}>
+                        {user.nickname}
+                    </span>
+                    :
                     <p>no has iniciado sesion <span onClick={() => router.push('/login')}>inicia aqui</span></p>
                 }    
             </header>

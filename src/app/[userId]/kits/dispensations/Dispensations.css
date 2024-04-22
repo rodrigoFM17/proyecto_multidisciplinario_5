@@ -1,0 +1,34 @@
+.dispensations-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3em;
+    padding: 1em;
+    gap: 1em;
+
+    & h1 {
+        color: var(--light);
+    }
+}
+
+.dispensation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 80%;
+    padding: 20px;
+    background-color: var(--contrast);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: .5em;
+    border: 2px solid var(--secondary-color);
+    min-width: 300px;
+
+    & > div {
+        display: flex;
+        gap: 15px;
+        min-width: 150px;
+    } 
+
+}
